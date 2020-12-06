@@ -11,9 +11,11 @@ galaxy_info:
       - 20.04
 
 dependencies:
-  - robertdebock.bootstrap
+  - name: robertdebock.bootstrap
+    version: 4.3.2
   - robertdebock.update
-  - geerlingguy.ntp
+  - name: geerlingguy.ntp
+    version: 2.0.0
   - geerlingguy.pip
   - ypsman.ipv6_disable
   - geerlingguy.swap
