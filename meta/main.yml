@@ -5,6 +5,8 @@ galaxy_info:
   license: Apache-2.0
   company: none
   min_ansible_version: 2.8
+  platforms:
+    - "Ubuntu 20.04"
 
 dependencies:
   - robertdebock.bootstrap
