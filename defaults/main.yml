@@ -1,0 +1,8 @@
+remove_snap: true
+remove_unattended_upgrades: true
+disable_ipv6: true
+swap_size: 2048
+reboot_always: No
+
+ntp_enabled: True
+ntp_timezone: Europe/Berlin

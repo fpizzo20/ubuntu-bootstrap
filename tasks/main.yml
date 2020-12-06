@@ -1,0 +1,45 @@
+---
+
+- name: Ensure dependencies are installed.
+  when: remove_snap
+  apt:
+    name: snapd
+    state: absent
+    autoremove: true
+
+- name: Remove unattended-upgrades
+  when: remove_unattended_upgrades
+  apt:
+    name: unattended-upgrades
+    state: absent
+    autoremove: true
+
+- name: Include robertdebock.bootstrap
+  include_role:
+    name: robertdebock.bootstrap
+
+- name: Include robertdebock.update
+  include_role:
+    name: robertdebock.update
+
+- name: Include geerlingguy.ntp
+  include_role:
+    name: geerlingguy.ntp
+
+- name: Include geerlingguy.pip
+  include_role:
+    name: geerlingguy.pip
+
+- name: Include ypsman.ipv6_disable
+  when: disable_ipv6
+  include_role:
+    name: ypsman.ipv6_disable
+
+- name: Include geerlingguy.swap
+  when: swap_size > 0
+  include_role:
+    name: geerlingguy.swap
+
+- name: Include robertdebock.reboot
+  include_role:
+    name: robertdebock.reboot
