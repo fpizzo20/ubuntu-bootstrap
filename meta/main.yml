@@ -6,7 +6,9 @@ galaxy_info:
   company: none
   min_ansible_version: 2.8
   platforms:
-    - "Ubuntu 20.04"
+    - name: SomePlatform
+      versions:
+      - 20.04
 
 dependencies:
   - robertdebock.bootstrap
